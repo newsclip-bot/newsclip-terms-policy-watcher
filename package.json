@@ -1,0 +1,11 @@
+{
+  "name": "newsclip-terms-policy-watcher",
+  "version": "0.1.0",
+  "description": "Fetch a policy page and compute a checksum for change detection.",
+  "main": "index.js",
+  "type": "commonjs",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  }
+}
