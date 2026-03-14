@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsclip Utility: Site Audit Article Check</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .back-link {
+            margin-bottom: 20px;
+        }
+        
+        .back-link a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+        
+        .category-section {
+            margin-bottom: 50px;
+        }
+        
+        .category-header {
+            font-size: 1.8rem;
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+        
+        .article-row {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .article-row:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        }
+        
+        .article-content {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .article-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .article-text {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        
+        .article-title {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        
+        .article-title a {
+            color: #333;
+            text-decoration: none;
+        }
+        
+        .article-title a:hover {
+            color: #667eea;
+        }
+        
+        .article-excerpt {
+            color: #666;
+            margin-bottom: 12px;
+            flex-grow: 1;
+            font-size: 0.95rem;
+        }
+        
+        .article-hashtags {
+            color: #667eea;
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+            word-wrap: break-word;
+            max-height: 60px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .article-date {
+            color: #999;
+            font-size: 0.85rem;
+            font-style: italic;
+        }
+        
+        footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="back-link">
+            <a href="index.html">← Back to Home</a>
+        </div>
+        
+        <header>
+            <h1>Newsclip Utility: Site Audit Article Check</h1>
+            <p>Latest Articles Grouped by Category</p>
+            <p style="font-size: 0.9rem; margin-top: 10px;">Generated: March 14, 2026 at 06:00 PM</p>
+        </header>
+        
+        <section class="category-section">
+  <h2 class="category-header">General</h2>
+  <div class="articles-grid">
+    <article class="article-row">
+      <div class="article-content">
+        <img src="https://newsclip.com/images/articles/newsclip-article-107006.jpg" alt="Fractured Loyalties: Iranian Voices Turn Against Trump" class="article-image" />
+        <div class="article-text">
+          <h3 class="article-title"><a href="https://newsclip.com/article/fractured-loyalties-iranian-voices-turn-against-trump" title="Fractured Loyalties: Iranian Voices Turn Against Trump">Fractured Loyalties: Iranian Voices Turn Against Trump</a></h3>
+          <p class="article-excerpt">In the shadow of escalating violence, Iranians once hopeful for change are now expressing disillusionment not just with their own leaders but also with Trump&#039;s foreign policies. As tensions rise, their plight is becomin…</p>
+          <div class="article-hashtags">#Iran #Protests #Trump #ForeignPolicy #Dissent #HumanRights</div>
+          <time class="article-date">March 14, 2026</time>
+        </div>
+      </div>
+    </article>
+    <article class="article-row">
+      <div class="article-content">
+        <img src="https://static.foxnews.com/foxnews.com/content/uploads/2025/07/passport-and-visa-travel-picture.jpg" alt="New Rule Cuts U.S. Citizenship Renunciation Fee by 80%: A Pivotal Shift" class="article-image" />
+        <div class="article-text">
+          <h3 class="article-title"><a href="https://newsclip.com/article/new-rule-cuts-us-citizenship-renunciation-fee-by-80-a-pivotal-shift" title="New Rule Cuts U.S. Citizenship Renunciation Fee by 80%: A Pivotal Shift">New Rule Cuts U.S. Citizenship Renunciation Fee by 80%: A Pivotal Shift</a></h3>
+          <p class="article-excerpt">The State Department&#039;s dramatic slashing of the citizenship renunciation fee from $2,350 to $450 holds significant implications for Americans abroad. This 80% reduction eases financial burdens, reflecting broader policy…</p>
+          <div class="article-hashtags">#Citizenship #ExpatLife #StateDepartment #ImmigrationPolicy #FinancialImpact</div>
+          <time class="article-date">March 14, 2026</time>
+        </div>
+      </div>
+    </article>
+    <article class="article-row">
+      <div class="article-content">
+        <img src="https://newsclip.com/images/articles/newsclip-article-106641.jpg" alt="Examining the Fallout: Hegseth&#039;s Commitment to Investigate the School Strike Incident" class="article-image" />
+        <div class="article-text">
+          <h3 class="article-title"><a href="https://newsclip.com/article/examining-the-fallout-hegseths-commitment-to-investigate-the-school-strike-incident" title="Examining the Fallout: Hegseth&#039;s Commitment to Investigate the School Strike Incident">Examining the Fallout: Hegseth&#039;s Commitment to Investigate the School Strike Incident</a></h3>
+          <p class="article-excerpt">In a critical response to the recent school strike linked to escalating tensions with Iran, Hegseth pledges a comprehensive investigation. As narratives unfold, we must navigate the complexities of accountability and th…</p>
+          <div class="article-hashtags">#MiddleEast #Iran #USPolitics #Accountability #PeaceInitiatives</div>
+          <time class="article-date">March 14, 2026</time>
+        </div>
+      </div>
+    </article>
+    <article class="article-row">
+      <div class="article-content">
+        <img src="https://newsclip.com/images/articles/newsclip-article-106638.jpg" alt="Damage Reported on Beale AFB Tanker Ties to KC-135 Crash in Iraq" class="article-image" />
+        <div class="article-text">
+          <h3 class="article-title"><a href="https://newsclip.com/article/damage-reported-on-beale-afb-tanker-ties-to-kc-135-crash-in-iraq" title="Damage Reported on Beale AFB Tanker Ties to KC-135 Crash in Iraq">Damage Reported on Beale AFB Tanker Ties to KC-135 Crash in Iraq</a></h3>
+          <p class="article-excerpt">The recent damage sustained by a Beale AFB tanker aircraft raises alarm following the tragic KC-135 crash in Iraq. Explore the implications of this incident as we delve into its context and consequences for military avi…</p>
+          <div class="article-hashtags">#MilitaryAviation #SafetyFirst #KC135 #BealeAFB #USAirForce</div>
+          <time class="article-date">March 14, 2026</time>
+        </div>
+      </div>
+    </article>
+    <article class="article-row">
+      <div class="article-content">
+        <img src="https://static.foxnews.com/foxnews.com/content/uploads/2026/03/crockett-split-1.jpg" alt="Chaos in Dallas: Security Guard Linked to Rep. Jasmine Crockett Killed in SWAT Standoff" class="article-image" />
+        <div class="article-text">
+          <h3 class="article-title"><a href="https://newsclip.com/article/chaos-in-dallas-security-guard-linked-to-rep-jasmine-crockett-killed-in-swat-standoff" title="Chaos in Dallas: Security Guard Linked to Rep. Jasmine Crockett Killed in SWAT Standoff">Chaos in Dallas: Security Guard Linked to Rep. Jasmine Crockett Killed in SWAT Standoff</a></h3>
+          <p class="article-excerpt">A security guard allegedly connected to Rep. Jasmine Crockett was shot dead in a tense SWAT standoff in Dallas. The suspect, wanted for impersonating police, raised alarming questions about security protocols surroundin…</p>
+          <div class="article-hashtags">#DallasSWAT #PublicSafety #SecurityConcerns #CivicResponsibility #InvestigativeJournalism</div>
+          <time class="article-date">March 14, 2026</time>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+<section class="category-section">
+  <h2 class="category-header">Editorial</h2>
+  <div class="articles-grid">
+    <article class="article-row">
+      <div class="article-content">
+        <img src="https://i.guim.co.uk/img/media/04e6f4c5ab9d748c05dcb76ecb1ee1ce901ef918/506_0_4080_3264/master/4080.jpg?width=1200&amp;height=630&amp;quality=85&amp;auto=format&amp;fit=crop&amp;precrop=40:21,offset-x50,offset-y0&amp;overlay-align=bottom%2Cleft&amp;overlay-width=100p&amp;overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&amp;enable=upscale&amp;s=1c18742e4be7070a61a55bdc80cadab1" alt="Affordable Housing: A Distant Dream?" class="article-image" />
+        <div class="article-text">
+          <h3 class="article-title"><a href="https://newsclip.com/article/affordable-housing-a-distant-dream" title="Affordable Housing: A Distant Dream?">Affordable Housing: A Distant Dream?</a></h3>
+          <p class="article-excerpt">We&#039;ve reached a point where &#039;affordable&#039; housing is just a mirage, as revealed in Richard Eltringham&#039;s critique. Are we merely pushing the unaffordable further out of sight, behind the veil of commuter despair? Let&#039;s un…</p>
+          <div class="article-hashtags">#AffordableHousing #UrbanPlanning #CommutingSolutions #HousingCrisis #SustainableLiving</div>
+          <time class="article-date">March 14, 2026</time>
+        </div>
+      </div>
+    </article>
+    <article class="article-row">
+      <div class="article-content">
+        <img src="https://newsclip.com/images/articles/newsclip-article-106761.jpg" alt="Unpacking Olympia: Achievements and Missed Opportunities" class="article-image" />
+        <div class="article-text">
+          <h3 class="article-title"><a href="https://newsclip.com/article/unpacking-olympia-achievements-and-missed-opportunities" title="Unpacking Olympia: Achievements and Missed Opportunities">Unpacking Olympia: Achievements and Missed Opportunities</a></h3>
+          <p class="article-excerpt">In a decisive session, Olympia&#039;s lawmakers navigated successes and setbacks. Let&#039;s delve into what was accomplished and what got sidelined, revealing underlying implications that affect us all. Join me on this urgent ex…</p>
+          <div class="article-hashtags">#Olympia #LegislativeReview #ClimateAction #PublicEducation #HealthcareReform</div>
+          <time class="article-date">March 14, 2026</time>
+        </div>
+      </div>
+    </article>
+    <article class="article-row">
+      <div class="article-content">
+        <img src="https://i.guim.co.uk/img/media/bf19a5fa05286cf0a568511504676d5300d04e86/489_0_6000_4800/master/6000.jpg?width=1200&amp;height=630&amp;quality=85&amp;auto=format&amp;fit=crop&amp;precrop=40:21,offset-x50,offset-y0&amp;overlay-align=bottom%2Cleft&amp;overlay-width=100p&amp;overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctb3BpbmlvbnMucG5n&amp;enable=upscale&amp;s=bbabfbc88dcc48a63c20ccfe6203f990" alt="A Crime Unmasked: The Unjust Silence on U.S.-Israeli Aggression in Iran" class="article-image" />
+        <div class="article-text">
+          <h3 class="article-title"><a href="https://newsclip.com/article/a-crime-unmasked-the-unjust-silence-on-us-israeli-aggression-in-iran" title="A Crime Unmasked: The Unjust Silence on U.S.-Israeli Aggression in Iran">A Crime Unmasked: The Unjust Silence on U.S.-Israeli Aggression in Iran</a></h3>
+          <p class="article-excerpt">As the world reacts to the U.S. and Israeli military actions in Iran, the glaring double standards expose a troubling indifference to civilian lives lost. Why is there such muted condemnation compared to the uproar over…</p>
+          <div class="article-hashtags">#IranWar #InternationalLaw #HumanRights #GeopoliticalHypocrisy #CivilianCasualties</div>
+          <time class="article-date">March 14, 2026</time>
+        </div>
+      </div>
+    </article>
+    <article class="article-row">
+      <div class="article-content">
+        <img src="https://newsclip.com/images/articles/newsclip-article-107111.jpg" alt="Revisiting the Boulder Valley Comprehensive Plan: A Community Conversation" class="article-image" />
+        <div class="article-text">
+          <h3 class="article-title"><a href="https://newsclip.com/article/revisiting-the-boulder-valley-comprehensive-plan-a-community-conversation" title="Revisiting the Boulder Valley Comprehensive Plan: A Community Conversation">Revisiting the Boulder Valley Comprehensive Plan: A Community Conversation</a></h3>
+          <p class="article-excerpt">As Boulder revisits its Comprehensive Plan, it&#039;s essential to engage in a dialogue that questions the status quo and embraces a visionary approach to our community&#039;s future. Let&#039;s explore the implications of these updat…</p>
+          <div class="article-hashtags">#BoulderValley #ComprehensivePlan #CommunityEngagement #SustainableGrowth #InclusivePlanning</div>
+          <time class="article-date">March 14, 2026</time>
+        </div>
+      </div>
+    </article>
+    <article class="article-row">
+      <div class="article-content">
+        <img src="https://newsclip.com/images/articles/newsclip-article-107105.jpg" alt="Unearthing the Truth: Examining Religious Education Hypocrisy in Texas" class="article-image" />
+        <div class="article-text">
+          <h3 class="article-title"><a href="https://newsclip.com/article/unearthing-the-truth-examining-religious-education-hypocrisy-in-texas" title="Unearthing the Truth: Examining Religious Education Hypocrisy in Texas">Unearthing the Truth: Examining Religious Education Hypocrisy in Texas</a></h3>
+          <p class="article-excerpt">In Texas, the glaring contradictions in religious education policy raise profound questions about civic responsibility and accountability. I delve into how these discrepancies impact our communities and what they reveal…</p>
+          <div class="article-hashtags">#EducationReform #ReligiousEducation #TexasPolitics #AcademicIntegrity #CivicAccountability</div>
+          <time class="article-date">March 14, 2026</time>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+<section class="category-section">
+  <h2 class="category-header">Sports</h2>
+  <div class="articles-grid">
+    <article class="article-row">
+      <div class="article-content">
+        <img src="https://a2.espncdn.com/combiner/i?img=%2Fphoto%2F2026%2F0314%2Fr1628151_1296x729_16%2D9.jpg" alt="UCLA Triumphs Over Michigan State Despite Bilodeau Injury Setback" class="article-image" />
+        <div class="article-text">
+          <h3 class="article-title"><a href="https://newsclip.com/article/ucla-triumphs-over-michigan-state-despite-bilodeau-injury-setback" title="UCLA Triumphs Over Michigan State Despite Bilodeau Injury Setback">UCLA Triumphs Over Michigan State Despite Bilodeau Injury Setback</a></h3>
+          <p class="article-excerpt">In a dramatic face-off, UCLA&#039;s Tyler Bilodeau suffered a leg injury, but the Bruins fought valiantly to seal an 88-84 victory over No. 8 Michigan State, advancing to the Big Ten tournament semifinals. The heart of the g…</p>
+          <div class="article-hashtags">#UCLABruins #MarchMadness #BigTen #CollegeBasketball #BilodeauInjury</div>
+          <time class="article-date">March 14, 2026</time>
+        </div>
+      </div>
+    </article>
+    <article class="article-row">
+      <div class="article-content">
+        <img src="https://assets.newsweek.com/wp-content/uploads/2026/03/GettyImages-2085147056.jpg?w=1200crop=1" alt="Auston Matthews&#039; Season Over After Gudas&#039; Reckless Hit: A Deep Dive" class="article-image" />
+        <div class="article-text">
+          <h3 class="article-title"><a href="https://newsclip.com/article/auston-matthews-season-over-after-gudas-reckless-hit-a-deep-dive" title="Auston Matthews&#039; Season Over After Gudas&#039; Reckless Hit: A Deep Dive">Auston Matthews&#039; Season Over After Gudas&#039; Reckless Hit: A Deep Dive</a></h3>
+          <p class="article-excerpt">In a shocking turn, Auston Matthews has been sidelined for the remainder of the season after a knee-to-knee hit from Radko Gudas. This incident has smashed Maple Leafs&#039; playoff hopes and ignited fierce debate over playe…</p>
+          <div class="article-hashtags">#AustonMatthews #NHL #RadkoGudas #PlayerSafety #MapleLeafs</div>
+          <time class="article-date">March 14, 2026</time>
+        </div>
+      </div>
+    </article>
+    <article class="article-row">
+      <div class="article-content">
+        <img src="https://assets.newsweek.com/wp-content/uploads/2026/03/GettyImages-2266396921.jpg?w=1600&amp;quality=80&amp;webp=1" alt="Team USA&#039;s Uneasy Victory: A Win that Demands More from Bryce Harper" class="article-image" />
+        <div class="article-text">
+          <h3 class="article-title"><a href="https://newsclip.com/article/team-usas-uneasy-victory-a-win-that-demands-more-from-bryce-harper" title="Team USA&#039;s Uneasy Victory: A Win that Demands More from Bryce Harper">Team USA&#039;s Uneasy Victory: A Win that Demands More from Bryce Harper</a></h3>
+          <p class="article-excerpt">Despite advancing to the semifinals after a shaky win against Canada, Team USA faces relentless criticism and concerns about performance. Bryce Harper&#039;s struggles at the plate have left fans questioning the team&#039;s readi…</p>
+          <div class="article-hashtags">#WorldBaseballClassic #TeamUSA #BryceHarper #Baseball #SportsNews</div>
+          <time class="article-date">March 14, 2026</time>
+        </div>
+      </div>
+    </article>
+    <article class="article-row">
+      <div class="article-content">
+        <img src="https://s.yimg.com/ny/api/res/1.2/X_rQy6La4qjh2pujvnR2Cw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA7Y2Y9d2VicA--/https://media.zenfs.com/en/ap.org/63cced5064948a43c538c3ea47e89ddc" alt="Bayern Battles Back in 1-1 Draw Against Bayer Leverkusen: Dortmund Gains Ground" class="article-image" />
+        <div class="article-text">
+          <h3 class="article-title"><a href="https://newsclip.com/article/bayern-battles-back-in-1-1-draw-against-bayer-leverkusen-dortmund-gains-ground" title="Bayern Battles Back in 1-1 Draw Against Bayer Leverkusen: Dortmund Gains Ground">Bayern Battles Back in 1-1 Draw Against Bayer Leverkusen: Dortmund Gains Ground</a></h3>
+          <p class="article-excerpt">What a match! Bayern Munich clawed back from a goal down to secure a gritty 1-1 draw against Bayer Leverkusen, finishing the game with just nine players. Meanwhile, Borussia Dortmund closes in, breathing down Bayern&#039;s n…</p>
+          <div class="article-hashtags">#Bundesliga #BayernMunich #BayerLeverkusen #BorussiaDortmund #Soccer #SportsNews</div>
+          <time class="article-date">March 14, 2026</time>
+        </div>
+      </div>
+    </article>
+    <article class="article-row">
+      <div class="article-content">
+        <img src="https://assets.newsweek.com/wp-content/uploads/2026/03/GettyImages-2243065527.jpg?w=1200crop=1" alt="Anthony Edwards on Steph Curry: A Friendship Beyond the Court" class="article-image" />
+        <div class="article-text">
+          <h3 class="article-title"><a href="https://newsclip.com/article/anthony-edwards-on-steph-curry-a-friendship-beyond-the-court" title="Anthony Edwards on Steph Curry: A Friendship Beyond the Court">Anthony Edwards on Steph Curry: A Friendship Beyond the Court</a></h3>
+          <p class="article-excerpt">In a thrilling showdown against the Warriors, Timberwolves&#039; Anthony Edwards elevates his game while extending heartfelt praise for injured superstar Steph Curry. It&#039;s a moment that encapsulates sportsmanship amidst fier…</p>
+          <div class="article-hashtags">#NBA #Timberwolves #Warriors #AnthonyEdwards #StephCurry</div>
+          <time class="article-date">March 14, 2026</time>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+<section class="category-section">
+  <h2 class="category-header">Entertainment</h2>
+  <div class="articles-grid">
+    <article class="article-row">
+      <div class="article-content">
+        <img src="https://newsclip.com/images/articles/newsclip-article-107223.jpg" alt="Inside the Scandal: Rebel Wilson&#039;s PR Team and the Dark Side of Hollywood" class="article-image" />
+        <div class="article-text">
+          <h3 class="article-title"><a href="https://newsclip.com/article/inside-the-scandal-rebel-wilsons-pr-team-and-the-dark-side-of-hollywood" title="Inside the Scandal: Rebel Wilson&#039;s PR Team and the Dark Side of Hollywood">Inside the Scandal: Rebel Wilson&#039;s PR Team and the Dark Side of Hollywood</a></h3>
+          <p class="article-excerpt">Leaked audio seems to unveil a shocking plot by Rebel Wilson&#039;s PR team to undermine a producer of her latest film, raising eyebrows about the ethics in celebrity publicity tactics. Could this be the tip of a much deeper…</p>
+          <div class="article-hashtags">#RebelWilson #HollywoodScandal #PREthics #EntertainmentNews #CelebrityCulture</div>
+          <time class="article-date">March 14, 2026</time>
+        </div>
+      </div>
+    </article>
+    <article class="article-row">
+      <div class="article-content">
+        <img src="https://www.rollingstone.com/wp-content/uploads/2026/03/doja-cat-agrees-chappell.jpg?crop=0px%2C0px%2C1798px%2C1014px&amp;resize=1600%2C900" alt="Doja Cat Stands by Chappell Roan: A Lesson in Authenticity" class="article-image" />
+        <div class="article-text">
+          <h3 class="article-title"><a href="https://newsclip.com/article/doja-cat-stands-by-chappell-roan-a-lesson-in-authenticity" title="Doja Cat Stands by Chappell Roan: A Lesson in Authenticity">Doja Cat Stands by Chappell Roan: A Lesson in Authenticity</a></h3>
+          <p class="article-excerpt">In a candid show of solidarity, Doja Cat defends Chappell Roan&#039;s reaction to aggressive paparazzi, underscoring the importance of self-expression without harming others. The viral confrontation raises questions about ce…</p>
+          <div class="article-hashtags">#DojaCat #ChappellRoan #Paparazzi #CelebrityCulture #MentalHealthAwareness</div>
+          <time class="article-date">March 14, 2026</time>
+        </div>
+      </div>
+    </article>
+    <article class="article-row">
+      <div class="article-content">
+        <img src="https://newsclip.com/images/articles/newsclip-article-106901.jpg" alt="Cher Best: A Feminine Force in Today&#039;s Entertainment Landscape" class="article-image" />
+        <div class="article-text">
+          <h3 class="article-title"><a href="https://newsclip.com/article/cher-best-a-feminine-force-in-todays-entertainment-landscape" title="Cher Best: A Feminine Force in Today&#039;s Entertainment Landscape">Cher Best: A Feminine Force in Today&#039;s Entertainment Landscape</a></h3>
+          <p class="article-excerpt">Explore how Cher Best blends cultural commentary and entertainment insights, revealing her impact on the evolving media landscape. As we delve into her dynamic approach, discover what lies beneath the surface of celebri…</p>
+          <div class="article-hashtags">#CherBest #Entertainment #CulturalCritique #CelebrityCulture #MediaInsights</div>
+          <time class="article-date">March 14, 2026</time>
+        </div>
+      </div>
+    </article>
+    <article class="article-row">
+      <div class="article-content">
+        <img src="https://static.foxnews.com/foxnews.com/content/uploads/2026/03/walker-hayes-hoodie.jpg" alt="Walker Hayes: My Journey Through Fatherhood and Sobriety" class="article-image" />
+        <div class="article-text">
+          <h3 class="article-title"><a href="https://newsclip.com/article/walker-hayes-my-journey-through-fatherhood-and-sobriety" title="Walker Hayes: My Journey Through Fatherhood and Sobriety">Walker Hayes: My Journey Through Fatherhood and Sobriety</a></h3>
+          <p class="article-excerpt">Walker Hayes reflects on how his tumultuous journey with alcoholism has shaped his role as a father, offering his children a front-row seat to resilience and transformation. This is a story of struggle, love, and the ho…</p>
+          <div class="article-hashtags">#WalkerHayes #Sobriety #CountryMusic #Parenthood #CulturalNarrative</div>
+          <time class="article-date">March 14, 2026</time>
+        </div>
+      </div>
+    </article>
+    <article class="article-row">
+      <div class="article-content">
+        <img src="https://ichef.bbci.co.uk/news/1024/branded_news/0b2d/live/83afc210-1f29-11f1-801d-ed3cff6bf876.jpg" alt="Geeta Gandbhir: Double Oscar Nominee Defies Odds" class="article-image" />
+        <div class="article-text">
+          <h3 class="article-title"><a href="https://newsclip.com/article/geeta-gandbhir-double-oscar-nominee-defies-odds" title="Geeta Gandbhir: Double Oscar Nominee Defies Odds">Geeta Gandbhir: Double Oscar Nominee Defies Odds</a></h3>
+          <p class="article-excerpt">Meet Geeta Gandbhir, the trailblazing director nominated for two Oscars this year in separate categories. Her unique journey sheds light on the challenges and triumphs in today&#039;s documentary filmmaking landscape.</p>
+          <div class="article-hashtags">#Oscars2026 #Filmmaking #GeetaGandbhir #Documentary #WomenInFilm</div>
+          <time class="article-date">March 14, 2026</time>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+<section class="category-section">
+  <h2 class="category-header">Business</h2>
+  <div class="articles-grid">
+    <article class="article-row">
+      <div class="article-content">
+        <img src="https://newsclip.com/images/articles/newsclip-article-106930.jpg" alt="Semmes Officers Sued: A Deep Dive into the Civil Rights Implications of Recent Shootout" class="article-image" />
+        <div class="article-text">
+          <h3 class="article-title"><a href="https://newsclip.com/article/semmes-officers-sued-a-deep-dive-into-the-civil-rights-implications-of-recent-shootout" title="Semmes Officers Sued: A Deep Dive into the Civil Rights Implications of Recent Shootout">Semmes Officers Sued: A Deep Dive into the Civil Rights Implications of Recent Shootout</a></h3>
+          <p class="article-excerpt">In a significant federal civil rights lawsuit, officers involved in last week&#039;s shootout with a local business owner in Semmes face serious allegations. This case not only raises questions about law enforcement accounta…</p>
+          <div class="article-hashtags">#CivilRights #PoliceAccountability #CommunityTrust #SemmesShooting #LawEnforcement</div>
+          <time class="article-date">March 14, 2026</time>
+        </div>
+      </div>
+    </article>
+    <article class="article-row">
+      <div class="article-content">
+        <img src="https://ichef.bbci.co.uk/news/1024/branded_news/171b/live/f55b1c10-1f11-11f1-9a3d-e74384ba5d85.jpg" alt="The Real Price of Fuel: A Retailer&#039;s Perspective on Surging Costs" class="article-image" />
+        <div class="article-text">
+          <h3 class="article-title"><a href="https://newsclip.com/article/the-real-price-of-fuel-a-retailers-perspective-on-surging-costs" title="The Real Price of Fuel: A Retailer&#039;s Perspective on Surging Costs">The Real Price of Fuel: A Retailer&#039;s Perspective on Surging Costs</a></h3>
+          <p class="article-excerpt">Goran Raven, an independent fuel retailer, faces backlash as oil prices soar. Despite his transparency efforts, rising costs result in hostility towards his staff. Join me in exploring the real-world impact of these fue…</p>
+          <div class="article-hashtags">#FuelPrices #SmallBusinesses #ConsumerAwareness #EconomicImpact #Retail</div>
+          <time class="article-date">March 14, 2026</time>
+        </div>
+      </div>
+    </article>
+    <article class="article-row">
+      <div class="article-content">
+        <img src="https://ichef.bbci.co.uk/news/1024/branded_news/445a/live/8fbbfed0-1ef1-11f1-8cb7-433d6fa8d367.jpg" alt="London Faces Surge in Fraud: A Call for Action" class="article-image" />
+        <div class="article-text">
+          <h3 class="article-title"><a href="https://newsclip.com/article/london-faces-surge-in-fraud-a-call-for-action" title="London Faces Surge in Fraud: A Call for Action">London Faces Surge in Fraud: A Call for Action</a></h3>
+          <p class="article-excerpt">City of London Police report that around 40% of fraud victims in England are Londoners, revealing a concerning trend as online scams proliferate. We delve into this alarming issue and what steps can be taken to combat i…</p>
+          <div class="article-hashtags">#FraudPrevention #CyberSecurity #LondonCrime #TechForGood #CommunityAction</div>
+          <time class="article-date">March 14, 2026</time>
+        </div>
+      </div>
+    </article>
+    <article class="article-row">
+      <div class="article-content">
+        <img src="https://media.wired.com/photos/69b35cec1e7f619c8ec103e8/191:100/w_1280,c_limit/in-transit-las-vegas.jpg" alt="Maximizing Your Business Trip to Las Vegas: A 2026 Guide" class="article-image" />
+        <div class="article-text">
+          <h3 class="article-title"><a href="https://newsclip.com/article/maximizing-your-business-trip-to-las-vegas-a-2026-guide" title="Maximizing Your Business Trip to Las Vegas: A 2026 Guide">Maximizing Your Business Trip to Las Vegas: A 2026 Guide</a></h3>
+          <p class="article-excerpt">Navigate the dazzling world of Las Vegas with my essential guide to blending work and pleasure. From impressive conference spaces to top-notch dining, discover how to make the most of your business trip without losing s…</p>
+          <div class="article-hashtags">#LasVegas #BusinessTravel #TravelGuide #Hotels #Dining</div>
+          <time class="article-date">March 14, 2026</time>
+        </div>
+      </div>
+    </article>
+    <article class="article-row">
+      <div class="article-content">
+        <img src="https://media.wired.com/photos/69b4a38f35ad66c4a99cb61d/191:100/w_1280,c_limit/Samsung%20Galaxy%20S26%20Ultra%20SOURCE%20Julian%20Chokkattu.jpg" alt="Samsung Galaxy S26 Ultra: A Privacy - First Approach" class="article-image" />
+        <div class="article-text">
+          <h3 class="article-title"><a href="https://newsclip.com/article/samsung-galaxy-s26-ultra-a-privacy-first-approach" title="Samsung Galaxy S26 Ultra: A Privacy - First Approach">Samsung Galaxy S26 Ultra: A Privacy - First Approach</a></h3>
+          <p class="article-excerpt">Samsung&#039;s Galaxy S26 Ultra introduces a noteworthy privacy display that enhances in-public usability without compromising screen quality or brightness. Discover how this feature reshapes smartphone experience in my full…</p>
+          <div class="article-hashtags">#Samsung #TechReview #Smartphones #Privacy #Innovation</div>
+          <time class="article-date">March 14, 2026</time>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+        
+        <footer>
+            <p>Articles are sourced from <a href="https://newsclip.com/">Newsclip</a> and grouped by category for easier browsing.</p>
+            <p style="margin-top: 10px;">Visit <a href="https://newsclip.com/general/">General</a>, <a href="https://newsclip.com/business/">Business</a>, <a href="https://newsclip.com/sports/">Sports</a>, <a href="https://newsclip.com/entertainment/">Entertainment</a>, and <a href="https://newsclip.com/editorial/">Editorial</a> sections.</p>
+        </footer>
+    </div>
+</body>
+</html>
